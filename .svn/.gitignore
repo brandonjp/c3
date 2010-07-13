@@ -5,3 +5,7 @@
 /.svn/*
 /.svn/*/*
 /.svn/*/*/*
+*.svn-base
+/.svn/*.svn-base
+/.svn/*/*.svn-base
+/.svn/*/*/*.svn-base
