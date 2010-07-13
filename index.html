@@ -1,227 +1,109 @@
-<style>
-* {margin:4px; padding:2px; list-style:none;}
-div {position: relative; border: 4px dotted green; overflow:auto; float:left}
-div.col {position: relative; border: 2px dashed red; float: left;}
-ul { width:200px; border: 1px solid purple}
-</style>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>c3 jQuery Menu</title>
+	  <script src="http://localhost/jquery/jquery.js"></script>
+	  <script src="index.js"></script>
+
+	<style>
+	* {margin:0px; padding:11px;}
+	div {position: relative; border: 4px dotted green; overflow:hidden; float:left; width:800px}
+	div.c3col {width:200px; position: relative; border: 2px dashed red; float: left;}
+	ul { width:400px; border: 1px solid purple}
+	</style>
+
+</head>
+<body>
+  
+
+	<div id="c3wrap">
+	<div class="c3col">
+	<ul class="col1">
+		<li>col1 - item 1
+			<ul class="col2">
+				<li>col2 - item 1.a</li>
+				<li>col2 - item 1.b</li>
+				<li>col2 - item 1.c</li>
+			</ul>
+		</li> 
+		<li>col1 - item 2
+			<ul class="col2">
+				<li>col2 - item 2.a
+					<ul class="col3">
+						<li>col3 - item 2.a.x</li>
+						<li>col3 - item 2.a.y</li>
+						<li>col3 - item 2.a.z</li>
+					</ul>
+				</li>
+				<li>col2 - item 2.b
+					<ul class="col3">
+						<li>col3 - item 2.b.x</li>
+						<li>col3 - item 2.b.y</li>
+						<li>col3 - item 2.b.z</li>
+					</ul>			
+				</li>
+				<li>col2 - item 2.c
+					<ul class="col3">
+						<li>col3 - item 2.c.x</li>
+						<li>col3 - item 2.c.y</li>
+						<li>col3 - item 2.c.z</li>
+					</ul>
+				</li>
+			</ul>
+		</li>
+		<li>col1 - item 3
+			<ul class="col2">
+				<li>col2 - item 3.a
+					<ul class="col3">
+						<li>col3 - item 3.a.x</li>
+						<li>col3 - item 3.a.y</li>
+						<li>col3 - item 3.a.z</li>
+					</ul>
+				</li>
+				<li>col2 - item 3.b
+					<ul class="col3">
+				 		<li>col3 - item 3.b.x</li>
+						<li>col3 - item 3.b.y</li>
+						<li>col3 - item 3.b.z</li>
+					</ul>			
+				</li>
+				<li>col2 - item 3.c
+					<ul class="col3">
+						<li>col3 - item 3.c.x</li>
+						<li>col3 - item 3.c.y</li>
+						<li>col3 - item 3.c.z</li>
+					</ul>
+				</li>
+				<li>col2 - item 3.d</li>
+				<li>col2 - item 3.e</li>
+			</ul>
+		</li>
+		<li>col1 - item 4
+			<ul class="col2">
+				<li>col2 - item 4.a</li>
+				<li>col2 - item 4.b</li>
+				<li>col2 - item 4.c</li>
+			</ul>
+		</li>
+		<li>col1 - item 5
+			<ul class="col2">
+				<li>col2 - item 5.a</li>
+				<li>col2 - item 5.b</li>
+				<li>col2 - item 5.c</li>
+			</ul>
+		</li>
+	</ul>
+	</div>
 
 
-<div id="c3wrap">div#c3wrap
-<div class="col">
-<ul class="col1">
-	<li>col1 - item 1
-		<ul class="col2">
-			<li>col2 - item 1.a</li>
-			<li>col2 - item 1.b</li>
-			<li>col2 - item 1.c</li>
-		</ul>
-	</li> 
-	<li>col1 - item 2
-		<ul class="col2">
-			<li>col2 - item 2.a
-				<ul class="col3">
-					<li>col3 - item 2.a.x</li>
-					<li>col3 - item 2.a.y</li>
-					<li>col3 - item 2.a.z</li>
-				</ul>
-			</li>
-			<li>col2 - item 2.b
-				<ul class="col3">
-					<li>col3 - item 2.b.x</li>
-					<li>col3 - item 2.b.y</li>
-					<li>col3 - item 2.b.z</li>
-				</ul>			
-			</li>
-			<li>col2 - item 2.c
-				<ul class="col3">
-					<li>col3 - item 2.c.x</li>
-					<li>col3 - item 2.c.y</li>
-					<li>col3 - item 2.c.z</li>
-				</ul>
-			</li>
-		</ul>
-	</li>
-	<li>col1 - item 3
-		<ul class="col2">
-			<li>col2 - item 3.a
-				<ul class="col3">
-					<li>col3 - item 3.a.x</li>
-					<li>col3 - item 3.a.y</li>
-					<li>col3 - item 3.a.z</li>
-				</ul>
-			</li>
-			<li>col2 - item 3.b
-				<ul class="col3">
-			 		<li>col3 - item 3.b.x</li>
-					<li>col3 - item 3.b.y</li>
-					<li>col3 - item 3.b.z</li>
-				</ul>			
-			</li>
-			<li>col2 - item 3.c
-				<ul class="col3">
-					<li>col3 - item 3.c.x</li>
-					<li>col3 - item 3.c.y</li>
-					<li>col3 - item 3.c.z</li>
-				</ul>
-			</li>
-			<li>col2 - item 3.d</li>
-			<li>col2 - item 3.e</li>
-		</ul>
-	</li>
-	<li>col1 - item 4
-		<ul class="col2">
-			<li>col2 - item 4.a</li>
-			<li>col2 - item 4.b</li>
-			<li>col2 - item 4.c</li>
-		</ul>
-	</li>
-	<li>col1 - item 5
-		<ul class="col2">
-			<li>col2 - item 5.a</li>
-			<li>col2 - item 5.b</li>
-			<li>col2 - item 5.c</li>
-		</ul>
-	</li>
-</ul>
+	<div class="c3col">col2
+	</div>
 
-<ul class="a">
-	<li class="a">this is a1
-		<ul class="b">
-			<li class="b">this is b
-				<ul class="c">
-					<li class="c">this is c</li>
-				</ul>
-			</li>
-		</ul>
-	</li>
-	<li class="a">this is a 2
-		<ul class="b">
-			<li class="b">this is b
-				<ul class="c">
-					<li class="c">this is c</li>
-				</ul>
-			</li>
-		</ul>
-	</li>
-	<li class="a">this is a 3
-		<ul class="b">
-			<li class="b">this is b
-				<ul class="c">
-					<li class="c">this is c</li>
-				</ul>
-			</li>
-		</ul>
-	</li>
-	<li class="a">this is a 4
-		<ul class="b">
-			<li class="b">this is b
-				<ul class="c">
-					<li class="c">this is c</li>
-				</ul>
-			</li>
-		</ul>
-	</li>
 
-</ul>
+	<div class="c3col">col3
+	</div>
 
-<ul>
-  <li>LEVEL 1 A
-    <ul>
-      <li>LEVEL 2 - 1 A - X 
-      </li>
-      <li>LEVEL 2 - 1 A - Y
-      </li>
-      <li>LEVEL 2 - 1 A - Z
-      </li>
-    </ul>
-  </li>
-  <li>LEVEL 1 B
-    <ul>
-      <li>LEVEL 2 - 1 B - X 
-        <ul>
-          <li>LEVEL 2 - 1 D - X 
-          </li>
-          <li>LEVEL 2 - 1 D - Y
-          </li>
-          <li>LEVEL 2 - 1 D - Z
-          </li>
-        </ul>
-      </li>
-      <li>LEVEL 2 - 1 B - Y
-      </li>
-      <li>LEVEL 2 - 1 B - Z
-        <ul>
-          <li>LEVEL 2 - 1 D - X 
-          </li>
-          <li>LEVEL 2 - 1 D - Y
-            <ul>
-              <li>LEVEL 2 - 1 D - X 
-              </li>
-              <li>LEVEL 2 - 1 D - Y
-              </li>
-              <li>LEVEL 2 - 1 D - Z
-              </li>
-            </ul>
-          </li>
-          <li>LEVEL 2 - 1 D - Z
-          </li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-  <li>LEVEL 1 C
-    <ul>
-      <li>LEVEL 2 - 1 C - X 
-      </li>
-      <li>LEVEL 2 - 1 C - Y
-        <ul>
-          <li>LEVEL 2 - 1 D - X 
-          </li>
-          <li>LEVEL 2 - 1 D - Y
-            <ul>
-              <li>LEVEL 2 - 1 D - X 
-              </li>
-              <li>LEVEL 2 - 1 D - Y
-                <ul>
-                  <li>LEVEL 2 - 1 D - X 
-                  </li>
-                  <li>LEVEL 2 - 1 D - Y
-                  </li>
-                  <li>LEVEL 2 - 1 D - Z
-                  </li>
-                </ul>
-              </li>
-              <li>LEVEL 2 - 1 D - Z
-              </li>
-            </ul>
-          </li>
-          <li>LEVEL 2 - 1 D - Z
-          </li>
-        </ul>
-      </li>
-      <li>LEVEL 2 - 1 C - Z
-      </li>
-    </ul>
-  </li>
-  <li>LEVEL 1 D
-    <ul>
-      <li>LEVEL 2 - 1 D - X 
-      </li>
-      <li>LEVEL 2 - 1 D - Y
-        <ul>
-          <li>LEVEL 2 - 1 D - X 
-          </li>
-          <li>LEVEL 2 - 1 D - Y
-          </li>
-          <li>LEVEL 2 - 1 D - Z
-          </li>
-        </ul>
-
-      </li>
-      <li>LEVEL 2 - 1 D - Z
-      </li>
-    </ul>
-  </li>
-</ul>
-</div><!-- /div.col1 -->
-</div><!-- /div#c3wrap -->
+	</div>
+</body>
+</html>
